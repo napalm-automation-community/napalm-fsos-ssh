@@ -41,9 +41,10 @@ ip ssh server enable
 ```
 
 You also need to configure a username and password with ro permission to authenticate with ssh
+You can change privilege level regarding driver capability you needs
 ```
-username <your_username> privilege 0
 username <your_username> password 0 <your_password>
+username <your_username> privilege 15
 ```
 
 # Licence
