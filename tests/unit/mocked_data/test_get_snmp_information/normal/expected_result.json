@@ -1,0 +1,11 @@
+{
+    "chassis_id": "AAAAAAAAAAAAAAAAAA",
+    "community": {
+        "test": {
+            "acl": "",
+            "mode": "ro"
+        }
+    },
+    "contact" : "admin@example.com",
+    "location": "Rack"
+}

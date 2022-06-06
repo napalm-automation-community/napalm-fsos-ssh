@@ -1,0 +1,11 @@
+Press "ESC" to abort.
+Ping to 8.8.8.8 by 5 32-byte payload ICMP packets, timeout is 3 seconds
+response time: 1000 ms
+response time: 0 ms
+response time: 0 ms
+response time: 0 ms
+response time: 0 ms
+Ping statistics for 8.8.8.8:
+ 5 packets transmitted, 5 packets received (100%), 0 packets lost (0%)
+Approximate round trip times:
+ Minimum = 0 ms, Maximum = 1000 ms, Average = 200 ms

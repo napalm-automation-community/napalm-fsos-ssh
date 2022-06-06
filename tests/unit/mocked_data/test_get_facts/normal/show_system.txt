@@ -1,0 +1,21 @@
+ System Up Time         : 95 days, 16 hours, 24 minutes, and 30.67 seconds
+ System Name            : SW2
+ System Location        : Rack
+ System Contact         : admin@example.com
+ MAC Address (Unit 1)   : 64-9D-99-10-08-58
+ System OID String  : 1.3.6.1.4.1.52642.2.1.45.101
+ http Server        : Disabled
+ http Server Port   : 80
+ https Server       : Enabled
+ https Server Port  : 443
+ Telnet Server      : Disabled
+ Telnet Server Port : 23
+
+System Temperature:
+-----------------------------------------------------------------
+unit 1     Temperature 1:  60 degrees
+
+
+System Power status:
+-----------------------------------------------------------------
+ Unit 1     Main Power Status      : Up

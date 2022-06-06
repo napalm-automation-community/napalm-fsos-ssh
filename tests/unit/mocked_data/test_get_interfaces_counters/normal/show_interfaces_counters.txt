@@ -1,0 +1,840 @@
+Ethernet 1/ 1
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                             5863964
+Octets Output                                          307230779
+Unicast Input Pkts                                         53183
+Unicast Output Pkts                                        45044
+Multi-cast Input Pkts                                         18
+Multi-cast Output Pkts                                   4115729
+Broadcast Input Pkts                                         437
+Broadcast Output Pkts                                     614702
+Discard Input Pkts                                             4
+Discard Output Pkts                                            6
+Alignment Errors                                               0
+FCS Errors                                                   134
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/ 2
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                               18258
+Octets Output                                          303557469
+Unicast Input Pkts                                           196
+Unicast Output Pkts                                         2795
+Multi-cast Input Pkts                                          4
+Multi-cast Output Pkts                                   4115739
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                     615139
+Discard Input Pkts                                             0
+Discard Output Pkts                                            6
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/ 3
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/ 4
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/ 5
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/ 6
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/ 7
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/ 8
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                            90405904
+Octets Output                                        59662844292
+Unicast Input Pkts                                       1003591
+Unicast Output Pkts                                     40169066
+Multi-cast Input Pkts                                      16570
+Multi-cast Output Pkts                                   5417903
+Broadcast Input Pkts                                       46390
+Broadcast Output Pkts                                    1850547
+Discard Input Pkts                                             1
+Discard Output Pkts                                      5715428
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/ 9
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/10
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                         10886954256
+Octets Output                                        33314788267
+Unicast Input Pkts                                      42475297
+Unicast Output Pkts                                     46827464
+Multi-cast Input Pkts                                     115991
+Multi-cast Output Pkts                                   4303011
+Broadcast Input Pkts                                       15040
+Broadcast Output Pkts                                     102804
+Discard Input Pkts                                            28
+Discard Output Pkts                                       175619
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/11
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                        162924339330
+Octets Output                                       145877508767
+Unicast Input Pkts                                     125127295
+Unicast Output Pkts                                    128723560
+Multi-cast Input Pkts                                      57887
+Multi-cast Output Pkts                                   5376601
+Broadcast Input Pkts                                      148330
+Broadcast Output Pkts                                    1748648
+Discard Input Pkts                                            45
+Discard Output Pkts                                           28
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/12
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                          4109192077
+Octets Output                                         6079232557
+Unicast Input Pkts                                      16883446
+Unicast Output Pkts                                     20606273
+Multi-cast Input Pkts                                      29096
+Multi-cast Output Pkts                                   4350266
+Broadcast Input Pkts                                       39322
+Broadcast Output Pkts                                     534268
+Discard Input Pkts                                            38
+Discard Output Pkts                                          104
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/13
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/14
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/15
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/16
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/17
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/18
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/19
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                         98749919224
+Octets Output                                       258145553937
+Unicast Input Pkts                                     187457401
+Unicast Output Pkts                                    235339852
+Multi-cast Input Pkts                                    1148685
+Multi-cast Output Pkts                                   6307621
+Broadcast Input Pkts                                     1183815
+Broadcast Output Pkts                                    2205030
+Discard Input Pkts                                           274
+Discard Output Pkts                                        34782
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                            20
+Pause Frames Output                                            0
+
+Ethernet 1/20
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/21
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/22
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/23
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/24
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/25
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                        197826050825
+Octets Output                                       130032365741
+Unicast Input Pkts                                     194857343
+Unicast Output Pkts                                    170563497
+Multi-cast Input Pkts                                    1191656
+Multi-cast Output Pkts                                   5074964
+Broadcast Input Pkts                                     2559154
+Broadcast Output Pkts                                     539160
+Discard Input Pkts                                        110534
+Discard Output Pkts                                          440
+Alignment Errors                                               0
+FCS Errors                                                   110
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/26
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                        158316246914
+Octets Output                                       127124122269
+Unicast Input Pkts                                     172314079
+Unicast Output Pkts                                    181708420
+Multi-cast Input Pkts                                   18032108
+Multi-cast Output Pkts                                    763074
+Broadcast Input Pkts                                      167786
+Broadcast Output Pkts                                     728762
+Discard Input Pkts                                        111450
+Discard Output Pkts                                          332
+Alignment Errors                                               0
+FCS Errors                                                   270
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/27
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Ethernet 1/28
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                                   0
+Octets Output                                                  0
+Unicast Input Pkts                                             0
+Unicast Output Pkts                                            0
+Multi-cast Input Pkts                                          0
+Multi-cast Output Pkts                                         0
+Broadcast Input Pkts                                           0
+Broadcast Output Pkts                                          0
+Discard Input Pkts                                             0
+Discard Output Pkts                                            0
+Alignment Errors                                               0
+FCS Errors                                                     0
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0
+
+Group 1
+
+   Item                                         Counters
+---------------------------------------     --------------------
+Octets Input                                        356142297739
+Octets Output                                       257156488010
+Unicast Input Pkts                                     367171422
+Unicast Output Pkts                                    352271917
+Multi-cast Input Pkts                                   19223764
+Multi-cast Output Pkts                                   5838038
+Broadcast Input Pkts                                     2726940
+Broadcast Output Pkts                                    1267922
+Discard Input Pkts                                        221984
+Discard Output Pkts                                          772
+Alignment Errors                                               0
+FCS Errors                                                   380
+Single Collision Frames                                        0
+Multiple Collision Frames                                      0
+Deferred Transmissions                                         0
+Late Collisions                                                0
+Excessive Collisions                                           0
+Internal Mac Transmit Errors                                   0
+Internal Mac Receive Errors                                    0
+Frames Too Long                                                0
+Carrier Sense Errors                                           0
+Symbol Errors                                                  0
+Pause Frames Input                                             0
+Pause Frames Output                                            0

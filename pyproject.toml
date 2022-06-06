@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "napalm-fsos-ssh"
+version = "0"
+description = "Napalm driver for FSOS through SSH"
+authors = ["Ludovic Ortega <ludovic.ortega@adminafk.fr>"]
+license = "CeCILL"
+readme = "README.md"
+homepage = "https://github.com/napalm-automation-community/napalm-fsos-ssh"
+repository = "https://github.com/napalm-automation-community/napalm-fsos-ssh"
+keywords = ["napalm", "fsos", "netmiko"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)",
+    "Topic :: Utilities",
+]
+include = [
+    "LICENSE",
+    "LICENSE.fr",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+napalm = "^3.4.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+pre-commit = "^2.19.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-version-plugin]
+source = "git-tag"

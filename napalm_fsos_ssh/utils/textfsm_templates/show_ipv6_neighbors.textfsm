@@ -1,0 +1,8 @@
+Value Required INTERFACE ([a-zA-Z]+ ?(\d+)?\/? ?\d+)
+Value MAC (\S+)
+Value IP (\S+)
+Value AGE (\d+)
+Value STATE (\S+)
+
+Start
+  ^${IP}\s+${AGE}\s+${MAC}\s+${STATE}\s+${INTERFACE} -> Record

@@ -1,0 +1,397 @@
+Building running configuration. Please wait...
+!<Version>0.0.2</Version>
+!<stackingDB>000000000000</stackingDB>
+!<stackingMac>01_64-9d-99-10-08-58_05</stackingMac>
+!<stackingMac>00_00-00-00-00-00-00_00</stackingMac>
+!<stackingMac>00_00-00-00-00-00-00_00</stackingMac>
+!<stackingMac>00_00-00-00-00-00-00_00</stackingMac>
+!<stackingMac>00_00-00-00-00-00-00_00</stackingMac>
+!<stackingMac>00_00-00-00-00-00-00_00</stackingMac>
+!
+
+!
+
+!
+clock timezone-predefined GMT+0100-Brussels,Copenhagen,Madrid,Paris
+!
+ntp client
+ntp server ntp1.example.com
+ntp server ntp2.example.com
+!
+hostname SW2
+lldp system-name SW2
+snmp-server system-location Rack
+snmp-server system-contact admin@example.com
+!
+!
+!
+!
+!
+!
+!
+!
+!
+snmp-server community test ro
+!
+snmp-server engine-id local 8000cda203649d991008580000
+snmp-server group admin v3 priv read defaultview
+snmp-server usm-user admin admin v3 encrypted auth sha AAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAA priv aes128 AAAAAAAAAAAAAAAAAAAAAAAAAA
+!
+!
+username pierre privilege 15
+username pierre password 7 AAAAAAAAAAAAAAAAAAAAAAAAAA
+no username admin
+no username guest
+username paul privilege 0
+username paul password 7 AAAAAAAAAAAAAAAAAAAAAAAAAA
+enable password 7 AAAAAAAAAAAAAAAAAAAAAAAAAA
+!
+!
+logging level module ram 4
+logging server address 192.168.10.102 port 1514
+logging trap
+!
+!
+!
+!
+!
+vlan database
+ VLAN 1 name DefaultVlan
+ VLAN 10 name DMZ
+ VLAN 20 name Lab
+ VLAN 40 name Management
+ VLAN 50 name Home
+ VLAN 60 name Guest
+!
+!
+!
+!
+!
+!
+spanning-tree priority 4096
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface ethernet 1/1
+ description ipmi3.example.com
+ no capabilities 10half
+ no capabilities 10full
+ no capabilities 100half
+ no capabilities 100full
+ no negotiation
+ lldp enable rxonly
+ switchport mode access
+ switchport access vlan 40
+ spanning-tree edgeport bpdu-guard
+ ipv6 nd ra suppress
+
+!
+interface ethernet 1/2
+ description ipmi4.example.com
+ no capabilities 10half
+ no capabilities 10full
+ no capabilities 100half
+ no capabilities 100full
+ no negotiation
+ lldp enable rxonly
+ switchport mode access
+ switchport access vlan 40
+ spanning-tree edgeport bpdu-guard
+ ipv6 nd ra suppress
+
+!
+interface ethernet 1/3
+ shutdown
+
+!
+interface ethernet 1/4
+ shutdown
+
+!
+interface ethernet 1/5
+ shutdown
+
+!
+interface ethernet 1/6
+ shutdown
+
+!
+interface ethernet 1/7
+ shutdown
+
+!
+interface ethernet 1/8
+ description grandstream.example.com
+ lldp enable rxonly
+ switchport mode access
+ switchport access vlan 50
+ spanning-tree edgeport bpdu-guard
+ ipv6 nd ra suppress
+
+!
+interface ethernet 1/9
+ shutdown
+
+!
+interface ethernet 1/10
+ description thomas.example.com
+ lldp enable rxonly
+ switchport mode access
+ switchport access vlan 60
+ spanning-tree edgeport bpdu-guard
+ ipv6 nd ra suppress
+
+!
+interface ethernet 1/11
+ description nas.example.com
+ no capabilities 10half
+ no capabilities 10full
+ no capabilities 100half
+ no capabilities 100full
+ lldp enable rxonly
+ switchport mode access
+ switchport access vlan 50
+ spanning-tree edgeport bpdu-guard
+ ipv6 nd ra suppress
+
+!
+interface ethernet 1/12
+ description pi1.example.com
+ no capabilities 10half
+ no capabilities 10full
+ no capabilities 100half
+ no capabilities 100full
+ lldp enable rxonly
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree edgeport bpdu-guard
+ ipv6 nd ra suppress
+
+!
+interface ethernet 1/13
+ shutdown
+
+!
+interface ethernet 1/14
+ shutdown
+
+!
+interface ethernet 1/15
+ shutdown
+
+!
+interface ethernet 1/16
+ shutdown
+
+!
+interface ethernet 1/17
+ shutdown
+
+!
+interface ethernet 1/18
+ shutdown
+
+!
+interface ethernet 1/19
+ description ap1.example.com
+ no capabilities 10half
+ no capabilities 10full
+ no capabilities 100half
+ no capabilities 100full
+ lldp enable rxonly
+ switchport mode trunk
+ switchport trunk native vlan 20
+ switchport trunk allowed vlan add 1,50,60
+ spanning-tree edgeport bpdu-guard
+ ipv6 nd ra suppress
+
+!
+interface ethernet 1/20
+ shutdown
+
+!
+interface ethernet 1/21
+ shutdown
+
+!
+interface ethernet 1/22
+ shutdown
+
+!
+interface ethernet 1/23
+ shutdown
+
+!
+interface ethernet 1/24
+ shutdown
+
+!
+interface ethernet 1/25
+ transceiver-monitor
+ description sw1.example.com
+ switchport mode trunk
+ switchport trunk allowed vlan add 10,20,40,50,60
+ spanning-tree edgeport
+ ipv6 nd ra suppress
+ dhcp snooping trust
+ dhcpv6 snooping trust
+
+ channel-group 1 mode auto
+!
+interface ethernet 1/26
+ description sw1.example.com
+ switchport mode trunk
+ switchport trunk allowed vlan add 10,20,40,50,60
+ spanning-tree edgeport
+ ipv6 nd ra suppress
+ dhcp snooping trust
+ dhcpv6 snooping trust
+
+ channel-group 1 mode auto
+!
+interface ethernet 1/27
+ shutdown
+
+!
+interface ethernet 1/28
+ shutdown
+
+!
+!
+!
+!
+!
+interface vlan 10
+!
+interface vlan 20
+!
+interface vlan 40
+ ip address 192.168.40.3 255.255.255.0
+!
+interface vlan 50
+!
+interface vlan 60
+!
+!
+!
+!
+management ip address 192.168.1.1 255.255.255.0
+!
+!
+!
+!
+dns server 192.168.10.21
+dns server 192.168.10.22
+dns server 2a0c:b641:2c0:110::21
+dns server 2a0c:b641:2c0:110::22
+dns domain-lookup
+!
+dns domain example.com
+!
+dns domain-list example.com
+!
+!
+!
+no service http enable
+!
+!
+!
+ip route 0.0.0.0 0.0.0.0 192.168.40.2
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh server enable
+!
+no service telnet enable
+!
+!
+!
+!
+!
+dhcp snooping vlan 10,20,40,50,60
+!
+!
+!
+dhcpv6 snooping vlan 10,20,40,50,60
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface vlan 10
+ ipv6 nd ra suppress
+!
+interface vlan 20
+ ipv6 nd ra suppress
+!
+interface vlan 40
+ ipv6 address 2a0c:b641:2c0:140::3/64
+ ipv6 nd ra suppress
+!
+interface vlan 50
+ ipv6 nd ra suppress
+!
+interface vlan 60
+ ipv6 nd ra suppress
+!
+ipv6 route ::/0 2a0c:b641:2c0:140::2
+!
+!
+!
+!
+!
+line console
+!
+!
+line vty
+!
+!
+!
+end
+!

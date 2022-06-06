@@ -1,0 +1,18 @@
+{
+  "Eth 1/19": [
+    {
+      "hostname": "UAP-AC-Lite",
+      "port": "18-E8-29-A3-24-10"
+    }
+  ],
+  "Group 1": [
+    {
+      "hostname": "SW1",
+      "port": "CC-4E-24-C8-35-B0"
+    },
+    {
+      "hostname": "SW1",
+      "port": "CC-4E-24-C8-35-B1"
+    }
+  ]
+}

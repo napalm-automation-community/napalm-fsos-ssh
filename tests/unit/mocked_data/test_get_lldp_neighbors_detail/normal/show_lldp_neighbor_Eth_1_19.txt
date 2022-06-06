@@ -1,0 +1,35 @@
+LLDP Remote Devices Information Detail
+------------------------------------------------------------------------------
+ Index                : 49
+ Chassis Type         : MAC Address
+ Chassis ID           : 18-E8-29-A3-24-10
+ Port ID Type         : MAC Address
+ Port ID              : 18-E8-29-A3-24-10
+ Time To Live         : 120 seconds
+ Port Description     : eth0
+ System Name          : UAP-AC-Lite
+ System Description   : UAP-AC-Lite, 0.0.0.0
+ System Capabilities  : Bridge, WLAN Access Point, Router, Station Only
+ Enabled Capabilities : Bridge, WLAN Access Point, Router
+
+ Management Address : fe80::1ae8:29ff:fea3:2410 (IPv6)
+
+ LLDP-MED Capabilities
+  Device Class           : Network Connectivity
+  Supported Capabilities : LLDP-MED Capabilities
+                           Network Policy
+                           Location Identification
+                           Extended Power via MDI - PSE
+                           Extended Power via MDI - PD
+                           Inventory
+  Enabled Capabilities   : LLDP-MED Capabilities
+                           Inventory
+
+ Inventory
+  Hardware Revision :
+  Firmware Revision :
+  Software Revision : 0.0.0
+  Serial Number     :
+  Manufacture Name  :
+  Model Name        :
+  Asset ID          :

@@ -1,0 +1,12 @@
+Value Required UPTIME (.*)
+Value HOSTNAME (\S+)
+Value List SYSTEM_TEMP_UNIT (\d+)
+Value List SYSTEM_TEMP_VALUE (\d+)
+Value List SYSTEM_POWER_UNIT (\d+)
+Value List SYSTEM_POWER_VALUE (Up|Down)
+
+Start
+  ^\s+System Up Time\s+:\s+${UPTIME}
+  ^\s+System Name\s+:\s+${HOSTNAME}
+  ^unit\s+${SYSTEM_TEMP_UNIT}\s+\S+\s+\d+:\s+${SYSTEM_TEMP_VALUE}
+  ^\s+Unit\s+${SYSTEM_POWER_UNIT}\s+Main Power Status\s+:\s+${SYSTEM_POWER_VALUE}

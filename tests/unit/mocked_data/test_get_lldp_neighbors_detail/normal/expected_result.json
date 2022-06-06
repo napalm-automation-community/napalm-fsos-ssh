@@ -1,0 +1,26 @@
+{
+  "Eth 1/19": [
+    {
+      "parent_interface": "",
+      "remote_chassis_id": "18-E8-29-A3-24-10",
+      "remote_system_name": "UAP-AC-Lite",
+      "remote_port": "",
+      "remote_port_description": "eth0",
+      "remote_system_description": "UAP-AC-Lite,",
+      "remote_system_capab": [],
+      "remote_system_enable_capab": []
+    }
+  ],
+  "Port 1": [
+    {
+      "parent_interface": "",
+      "remote_chassis_id": "CC-4E-24-C8-35-7E",
+      "remote_system_name": "SW1",
+      "remote_port": "",
+      "remote_port_description": "10GigabitEthernet1/1/51",
+      "remote_system_description": "",
+      "remote_system_capab": [],
+      "remote_system_enable_capab": []
+    }
+  ]
+}

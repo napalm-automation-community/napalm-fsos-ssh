@@ -1,0 +1,6 @@
+LLDP Remote Devices Information
+ Local Port Chassis ID        Port ID           Hold Time   System Name
+ ---------- ----------------- ----------------- ----------- --------------------
+ Eth 1/19   18-E8-29-A3-24-10 18-E8-29-A3-24-10 120 seconds UAP-AC-Lite
+ Group 1    CC-4E-24-C8-35-7E CC-4E-24-C8-35-B0 120 seconds SW1
+ Group 1    CC-4E-24-C8-35-7E CC-4E-24-C8-35-B1 120 seconds SW1

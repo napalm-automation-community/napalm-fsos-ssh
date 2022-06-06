@@ -1,0 +1,6 @@
+Value Required INTERFACE ([a-zA-Z]+ ?(\d+)?\/? ?\d+)
+Value Required IP ([^\/]+)
+Value Required NETMASK (\d+)
+
+Start
+  ^${INTERFACE}\s+\S+\s+\S+\s+${IP}\/${NETMASK} -> Record

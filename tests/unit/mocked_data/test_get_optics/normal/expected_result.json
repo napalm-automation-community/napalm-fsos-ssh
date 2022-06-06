@@ -1,0 +1,60 @@
+{
+  "Eth 1/25": {
+    "physical_channels": {
+      "channel": [
+        {
+          "index": 0,
+          "state": {
+            "output_power": {
+              "instant": -2.05,
+              "avg": -1.0,
+              "min": -1.0,
+              "max": -1.0
+            },
+            "input_power": {
+              "instant": -2.88,
+              "avg": -1.0,
+              "min": -1.0,
+              "max": -1.0
+            },
+            "laser_bias_current": {
+              "instant": 6.01,
+              "avg": -1.0,
+              "min": -1.0,
+              "max": -1.0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "Eth 1/26": {
+    "physical_channels": {
+      "channel": [
+        {
+          "index": 0,
+          "state": {
+            "input_power": {
+              "instant": -2.49,
+              "avg": -1.0,
+              "min": -1.0,
+              "max": -1.0
+            },
+            "output_power": {
+              "instant": -2.36,
+              "avg": -1.0,
+              "min": -1.0,
+              "max": -1.0
+            },
+            "laser_bias_current": {
+              "instant": 7.39,
+              "avg": -1.0,
+              "min": -1.0,
+              "max": -1.0
+            }
+          }
+        }
+      ]
+    }
+  }
+}

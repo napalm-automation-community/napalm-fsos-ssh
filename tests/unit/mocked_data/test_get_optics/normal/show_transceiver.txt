@@ -1,0 +1,59 @@
+Information of Eth 1/25
+ Connector Type        : LC
+ Fiber Type            : Multimode 50um (M5), Multimode 62.5um (M6)
+ Eth Compliance Codes  : 10GBASE-SR
+ Tx Central Wavelength : 850 nm
+ Baud Rate             : 10300 MBd
+ Vendor OUI            : 00-00-00
+ Vendor Name           : FS
+ Vendor PN             : SFP-10GSR-85
+ Vendor Rev            :
+ Vendor SN             : AAAAAAAAAAAA
+ Date Code             : 19-11-30
+ DDM Information
+   Temperature         : 53.00 degree C
+   Vcc                 : 3.28 V
+   Bias Current        : 6.01 mA
+   TX Power            : -2.05 dBm
+   RX Power            : -2.88 dBm
+ DDM Thresholds
+                            Low Alarm   Low Warning  High Warning    High Alarm
+   -----------           ------------  ------------  ------------  ------------
+   Temperature(Celsius)        -45.00        -40.00         85.00         90.00
+   Voltage(Volts)                3.00          3.10          3.50          3.60
+   Current(mA)                   0.00          0.00         12.00         15.00
+   TxPower(dBm)                 -8.50         -8.00          0.00          0.50
+   RxPower(dBm)                -12.50        -12.00          0.00          0.50
+
+Information of Eth 1/26
+ Connector Type        : LC
+ Fiber Type            : Multimode 50um (M5), Multimode 62.5um (M6)
+ Eth Compliance Codes  : 10GBASE-SR
+ Tx Central Wavelength : 850 nm
+ Baud Rate             : 10300 MBd
+ Vendor OUI            : 00-00-00
+ Vendor Name           : FS
+ Vendor PN             : SFP-10GSR-85
+ Vendor Rev            :
+ Vendor SN             : AAAAAAAAAAAB
+ Date Code             : 19-11-30
+ DDM Information
+   Temperature         : 57.63 degree C
+   Vcc                 : 3.29 V
+   Bias Current        : 7.39 mA
+   TX Power            : -2.36 dBm
+   RX Power            : -2.49 dBm
+ DDM Thresholds
+                            Low Alarm   Low Warning  High Warning    High Alarm
+   -----------           ------------  ------------  ------------  ------------
+   Temperature(Celsius)        -50.00        -40.00         85.00         95.00
+   Voltage(Volts)                3.00          3.10          3.50          3.60
+   Current(mA)                   0.00          0.00         12.00         15.00
+   TxPower(dBm)                 -9.30         -7.30          2.00          3.00
+   RxPower(dBm)                -13.10        -11.10          2.00          3.00
+
+Information of Eth 1/27
+  No SFP inserted
+
+Information of Eth 1/28
+  No SFP inserted

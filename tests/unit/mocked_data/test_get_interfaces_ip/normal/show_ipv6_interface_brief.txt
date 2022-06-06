@@ -1,0 +1,9 @@
+Interface       Status     IPv6       IPv6 Address
+--------------- ---------- ---------- ---------------------------------------
+VLAN 10         Up         Down       Unassigned
+VLAN 20         Up         Down       Unassigned
+VLAN 40         Up         Down       2a0c:b641:2c0:140::3/64
+VLAN 40         Up         Down       fe80::669d:99ff:fe10:858/10
+VLAN 50         Up         Down       Unassigned
+VLAN 60         Up         Down       Unassigned
+Craft           Up         Down       Unassigned

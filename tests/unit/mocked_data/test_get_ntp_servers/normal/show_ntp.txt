@@ -1,0 +1,9 @@
+Current Time             : Feb 18 06:52:33 2022
+Polling                  : 1024 seconds
+Current Mode             : unicast
+NTP Status               : Enabled
+NTP Authenticate Status  : Disabled
+Last Update NTP Server   :         Port: 0
+Last Update Time         : Jan  1 00:00:00 1970 UTC
+NTP Server "ntp1.example.com" version 3
+NTP Server "ntp2.example.com" version 3

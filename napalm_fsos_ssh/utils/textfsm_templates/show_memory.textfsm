@@ -1,0 +1,6 @@
+Value Required MEM_TOTAL (\S+)
+Value MEM_USED (\S+)
+
+Start
+  ^\s+Total  Memory:\s+${MEM_TOTAL}
+  ^\s+Used  Memory:\s+${MEM_USED}

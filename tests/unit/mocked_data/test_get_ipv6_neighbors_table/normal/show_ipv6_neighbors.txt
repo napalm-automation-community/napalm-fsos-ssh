@@ -1,0 +1,5 @@
+State: I1 - Incomplete, I2 - Invalid, R - Reachable, S - Stale, D - Delay,
+       P1 - Probe, P2 - Permanent, U - Unknown
+IPv6 Address                            Age  Link-layer Addr   State Interface
+--------------------------------------- ---- ----------------- ----- ---------
+2a0c:b641:2c0:140::2                     482 CC-4E-24-C8-35-7E S     VLAN 40

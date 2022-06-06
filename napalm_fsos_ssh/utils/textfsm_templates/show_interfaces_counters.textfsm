@@ -1,0 +1,24 @@
+Value Required INTERFACE ([a-zA-Z]+ ?(\d+)?\/? ?\d+)
+Value RX_OCTETS (\d+)
+Value TX_OCTETS (\d+)
+Value RX_UNICAST_PACKETS (\d+)
+Value TX_UNICAST_PACKETS (\d+)
+Value RX_MULTICAST_PACKETS (\d+)
+Value TX_MULTICAST_PACKETS (\d+)
+Value RX_BROADCAST_PACKETS (\d+)
+Value TX_BROADCAST_PACKETS (\d+)
+Value RX_DISCARDS (\d+)
+Value TX_DISCARDS (\d+)
+
+Start
+  ^${INTERFACE}
+  ^Octets Input\s+${RX_OCTETS}
+  ^Octets Output\s+${TX_OCTETS}
+  ^Unicast Input Pkts\s+${RX_UNICAST_PACKETS}
+  ^Unicast Output Pkts\s+${TX_UNICAST_PACKETS}
+  ^Multi-cast Input Pkts\s+${RX_MULTICAST_PACKETS}
+  ^Multi-cast Output Pkts\s+${TX_MULTICAST_PACKETS}
+  ^Broadcast Input Pkts\s+${RX_BROADCAST_PACKETS}
+  ^Broadcast Output Pkts\s+${TX_BROADCAST_PACKETS}
+  ^Discard Input Pkts\s+${RX_DISCARDS}
+  ^Discard Output Pkts\s+${TX_DISCARDS} -> Record

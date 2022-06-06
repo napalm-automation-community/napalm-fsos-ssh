@@ -1,0 +1,38 @@
+VLAN 10 is Administrative Up - Link Up
+  Address is 64-9D-99-10-08-58
+  Index: 1010, MTU: 1500
+  Address Mode is not specified
+  Proxy ARP is disabled
+  DHCP Client Vendor Class ID (text): S3900-24T4S
+  DHCP Relay Server:
+VLAN 20 is Administrative Up - Link Up
+  Address is 64-9D-99-10-08-58
+  Index: 1020, MTU: 1500
+  Address Mode is not specified
+  Proxy ARP is disabled
+  DHCP Client Vendor Class ID (text): S3900-24T4S
+  DHCP Relay Server:
+VLAN 40 is Administrative Up - Link Up
+  Address is 64-9D-99-10-08-58
+  Index: 1040, MTU: 1500
+  Address Mode is Static
+  IP Address: 192.168.40.3 Mask: 255.255.255.0
+  Proxy ARP is disabled
+  DHCP Client Vendor Class ID (text): S3900-24T4S
+  DHCP Relay Server:
+VLAN 50 is Administrative Up - Link Up
+  Address is 64-9D-99-10-08-58
+  Index: 1050, MTU: 1500
+  Address Mode is not specified
+  Proxy ARP is disabled
+  DHCP Client Vendor Class ID (text): S3900-24T4S
+  DHCP Relay Server:
+VLAN 60 is Administrative Up - Link Up
+  Address is 64-9D-99-10-08-58
+  Index: 1060, MTU: 1500
+  Address Mode is not specified
+  Proxy ARP is disabled
+  DHCP Client Vendor Class ID (text): S3900-24T4S
+  DHCP Relay Server:
+Craft interface is Administrative Up
+  IP Address: 192.168.1.1 Mask: 255.255.255.0

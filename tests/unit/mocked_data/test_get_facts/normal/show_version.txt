@@ -1,0 +1,6 @@
+Unit 1 -----------------------------
+ Serial Number          : AAAAAAAAAAAAAAAAAA
+ Hardware Version       : 1.0
+ Number of Ports        : 28
+ Loader Version         : 1.4
+ Operation Code Version : 1.7.3

@@ -1,0 +1,9 @@
+[
+    {
+        "interface": "Vlan 40",
+        "mac": "CC-4E-24-C8-35-7E",
+        "ip": "2a0c:b641:2c0:140::2",
+        "age": 482.0,
+        "state": "STALE"
+    }
+]

@@ -1,0 +1,17 @@
+{
+    "1.0.4.0/24": [
+        {
+            "protocol": "BGP",
+            "inactive_reason": "Local Preference",
+            "last_active": false,
+            "age": -1,
+            "next_hop": "is directly connected",
+            "selected_next_hop": false,
+            "preference": 0,
+            "current_active": false,
+            "outgoing_interface": "VLAN40",
+            "routing_table": "global",
+            "protocol_attributes": {}
+        }
+    ]
+}

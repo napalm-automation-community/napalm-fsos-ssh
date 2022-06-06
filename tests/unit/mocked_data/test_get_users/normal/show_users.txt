@@ -1,0 +1,9 @@
+User Accounts:
+User Name            Privilege
+-------------------- ----------
+paul                          0
+pierre                       15
+
+Users login:
+User Name            Type       Location
+-------------------- ---------- --------------------

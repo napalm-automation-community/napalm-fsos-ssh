@@ -1,0 +1,12 @@
+{
+    "paul": {
+        "level": 0,
+        "password": "",
+        "sshkeys": []
+    },
+    "pierre": {
+        "level": 15,
+        "password": "",
+        "sshkeys": []
+    }
+}

@@ -1,0 +1,7 @@
+
+ Total  Memory:    536870912 bytes
+ Used  Memory:     321478656 bytes
+ Used  percent:    60%
+
+ Generate Trap alarm threshold:    90%
+ Clear Trap alarm threshold     :    70%

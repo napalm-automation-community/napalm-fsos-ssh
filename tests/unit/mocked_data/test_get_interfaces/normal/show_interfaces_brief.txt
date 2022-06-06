@@ -1,0 +1,31 @@
+Interface Type         Admin  Link-Status  Negotiation  Speed/Duplex   Group
+------------------------------------------------------------------------- -----
+Eth 1/ 1  1000BASE-T   Up      Up            Disable       100full      None
+Eth 1/ 2  1000BASE-T   Up      Up            Disable       100full      None
+Eth 1/ 3  1000BASE-T   Down    Down          Auto                       None
+Eth 1/ 4  1000BASE-T   Down    Down          Auto                       None
+Eth 1/ 5  1000BASE-T   Down    Down          Auto                       None
+Eth 1/ 6  1000BASE-T   Down    Down          Auto                       None
+Eth 1/ 7  1000BASE-T   Down    Down          Auto                       None
+Eth 1/ 8  1000BASE-T   Up      Up            Auto          100full      None
+Eth 1/ 9  1000BASE-T   Down    Down          Auto                       None
+Eth 1/10  1000BASE-T   Up      Up            Auto          1000full     None
+Eth 1/11  1000BASE-T   Up      Up            Auto          1000full     None
+Eth 1/12  1000BASE-T   Up      Up            Auto          1000full     None
+Eth 1/13  1000BASE-T   Down    Down          Auto                       None
+Eth 1/14  1000BASE-T   Down    Down          Auto                       None
+Eth 1/15  1000BASE-T   Down    Down          Auto                       None
+Eth 1/16  1000BASE-T   Down    Down          Auto                       None
+Eth 1/17  1000BASE-T   Down    Down          Auto                       None
+Eth 1/18  1000BASE-T   Down    Down          Auto                       None
+Eth 1/19  1000BASE-T   Up      Up            Auto          1000full     None
+Eth 1/20  1000BASE-T   Down    Down          Auto                       None
+Eth 1/21  1000BASE-T   Down    Down          Auto                       None
+Eth 1/22  1000BASE-T   Down    Down          Auto                       None
+Eth 1/23  1000BASE-T   Down    Down          Auto                       None
+Eth 1/24  1000BASE-T   Down    Down          Auto                       None
+Eth 1/25  10GBASE SFP+ Up      Up            Disable       10Gfull      1
+Eth 1/26  10GBASE SFP+ Up      Up            Disable       10Gfull      1
+Eth 1/27  10GBASE SFP+ Down    Down          Disable       10Gfull      None
+Eth 1/28  10GBASE SFP+ Down    Down          Disable       10Gfull      None
+Group  1  10GBASE SFP+         Up            Disable       10Gfull

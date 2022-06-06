@@ -1,0 +1,24 @@
+{
+    "Vlan 40": {
+        "ipv4": {
+            "192.168.40.3": {
+                "prefix_length": 24
+            }
+        },
+        "ipv6": {
+            "2a0c:b641:2c0:140::3": {
+                "prefix_length": 64
+            },
+            "fe80::669d:99ff:fe10:858": {
+                "prefix_length": 10
+            }
+        }
+    },
+    "Craft": {
+        "ipv4": {
+            "192.168.1.1": {
+                "prefix_length": 24
+            }
+        }
+    }
+}
