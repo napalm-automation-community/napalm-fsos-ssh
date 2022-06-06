@@ -6,7 +6,7 @@ Napalm driver for FSOS using SSH
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 # Warning
-This driver has been tested only on S3900 24T4S
+This driver has been tested only on S3900 24T4S with version 1.7.3
 
 # Install
 ```
