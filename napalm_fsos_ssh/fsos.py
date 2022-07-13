@@ -7,8 +7,9 @@ import os
 import re
 import socket
 from ipaddress import IPv4Address, IPv4Network, ip_address
+from typing import Any, Dict, List, Union
 
-from napalm.base import NetworkDriver
+from napalm.base import NetworkDriver, models
 from napalm.base.exceptions import ConnectionClosedException
 from napalm.base.netmiko_helpers import netmiko_args
 
@@ -21,9 +22,14 @@ os.environ["NET_TEXTFSM"] = templates
 class FsosDriver(NetworkDriver):
     platform = "fsos"
 
-    """Napalm driver for FSOS"""
-
-    def __init__(self, hostname, username, password, timeout=60, optional_args=None):
+    def __init__(
+        self,
+        hostname: str,
+        username: str,
+        password: str,
+        timeout: int = 60,
+        optional_args: Dict[str, Any] = None,
+    ) -> None:
         self.device = None
         self.hostname = hostname
         self.username = username
@@ -38,17 +44,17 @@ class FsosDriver(NetworkDriver):
         self.netmiko_optional_args = netmiko_args(optional_args)
         self.netmiko_optional_args.setdefault("port", 22)
 
-    def open(self):
-        """Implement the NAPALM method open (mandatory)"""
+    def open(self) -> None:
         self.device = self._netmiko_open(
             self.device_type, netmiko_optional_args=self.netmiko_optional_args
         )
 
-    def close(self):
-        """Implement the NAPALM method close (mandatory)"""
+    def close(self) -> None:
         self._netmiko_close()
 
-    def _send_command(self, command, use_textfsm=False):
+    def _send_command(
+        self, command: Union[str, List], use_textfsm: bool = False
+    ) -> Union[str, Dict[str, str]]:
         """Wrapper for self.device.send.command().
         If command is a list will iterate through commands until valid command.
         """
@@ -57,29 +63,27 @@ class FsosDriver(NetworkDriver):
             if isinstance(command, list):
                 for cmd in command:
                     output = self.device.send_command(cmd, use_textfsm=use_textfsm)
-                    output = self._send_command_postprocess(output)
+                    if not use_textfsm:
+                        output = output.strip()
                     if "% Invalid" not in output:
                         break
             else:
                 output = self.device.send_command(command, use_textfsm=use_textfsm)
-                output = self._send_command_postprocess(output)
+                if not use_textfsm:
+                    output = output.strip()
 
             return output
         except (socket.error, EOFError) as e:
             raise ConnectionClosedException(str(e))
 
     @staticmethod
-    def _send_command_postprocess(output):
-        if not isinstance(output, list):
-            output = output.strip()
-        return output
-
-    @staticmethod
-    def _get_ip_version(ip):
+    def _get_ip_version(ip: str) -> str:
+        """Get ip version (ip or ipv6)"""
         return "ip" if type(ip_address(ip)) is IPv4Address else "ipv6"
 
     @staticmethod
-    def _format_interface_name(interface):
+    def _format_interface_name(interface: str) -> str:
+        """Format interface name"""
         if re.search(r"\d+", interface):
             interface_type = re.match(r"[A-Za-z]+", interface).group(0)
             interface_unit = (
@@ -90,8 +94,9 @@ class FsosDriver(NetworkDriver):
         return interface
 
     @staticmethod
-    def _format_uptime(uptime):
-        uptime_sec = 0
+    def _format_uptime(uptime: str) -> float:
+        """Format uptime in seconds"""
+        uptime_sec = 0.0
 
         uptime_info = uptime.replace("and", "").replace(" ", "").split(",")
 
@@ -99,19 +104,20 @@ class FsosDriver(NetworkDriver):
             unit = re.search(r"[a-zA-Z]+", info).group(0)
             time_value = float(re.search(r"\d+(\.\d+)?", info).group(0))
             if unit == "days":
-                uptime_sec += time_value * 86400
+                uptime_sec += time_value * 86400.0
             elif unit == "hours":
-                uptime_sec += time_value * 3600
+                uptime_sec += time_value * 3600.0
             elif unit == "minutes":
-                uptime_sec += time_value * 60
+                uptime_sec += time_value * 60.0
             elif unit == "seconds":
                 uptime_sec += time_value
 
         return float(uptime_sec)
 
     @staticmethod
-    def _format_speed(speed):
-        if "g" in speed:
+    def _format_speed(speed: str) -> float:
+        """Format speed in mb/s"""
+        if "g" in speed.lower():
             speed_match = re.match(r"\d+", speed).group(0)
             v = f"{speed_match}000"
         else:
@@ -119,7 +125,8 @@ class FsosDriver(NetworkDriver):
         return float(v)
 
     @staticmethod
-    def _get_protocol(protocol):
+    def _get_protocol(protocol: str) -> str:
+        """Get routing protocol from the shortname"""
         protocols = {
             "C": "CONNECTED",
             "S": "STATIC",
@@ -140,7 +147,8 @@ class FsosDriver(NetworkDriver):
         return protocols[protocol]
 
     @staticmethod
-    def _get_ipv6_neighbors_state(state):
+    def _get_ipv6_neighbors_state(state: str) -> str:
+        """Get IPv6 Neighbor state from the shortname"""
         states = {
             "I1": "INCOMPLETE",
             "I2": "INVALID",
@@ -155,7 +163,8 @@ class FsosDriver(NetworkDriver):
         return states[state]
 
     @staticmethod
-    def _sanitize_config(config):
+    def _sanitize_config(config: str) -> str:
+        """Remove sensitive information from config"""
         match_to_sanitize = [
             r"username\s+\S+\s+password.*\n",
             r"enable\s+password.*\n",
@@ -166,18 +175,13 @@ class FsosDriver(NetworkDriver):
 
         return config
 
-    def cli(self, commands):
-        """
-        Execute a list of commands and return the output in a dictionary format using the command
-        as the key.
-        Example input:
-        ["show clock", "show calendar"]
-        Output example:
-        {   "show calendar": u"22:02:01 UTC Thu Feb 18 2016",
-            "show clock": u"*22:01:51.165 UTC Thu Feb 18 2016"}
-        """
+    def cli(
+        self, commands: List[str], encoding: str = "text"
+    ) -> Dict[str, Union[str, Dict[str, Any]]]:
+        if encoding != "text":
+            raise NotImplementedError(f"{encoding} is not a supported encoding")
         cli_output = dict()
-        if type(commands) is not list:
+        if not isinstance(commands, list):
             raise TypeError("Please enter a valid list of commands!")
 
         for command in commands:
@@ -189,7 +193,9 @@ class FsosDriver(NetworkDriver):
 
         return cli_output
 
-    def get_config(self, retrieve="all", full=False, sanitized=False):
+    def get_config(
+        self, retrieve: str = "all", full: bool = False, sanitized: bool = False
+    ) -> models.ConfigDict:
         data = {
             "startup": "",
             "running": "",
@@ -215,7 +221,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_arp_table(self, vrf=""):
+    def get_arp_table(self, vrf: str = "") -> List[models.ARPTableDict]:
         command = "show arp"
         output = self._send_command(command, use_textfsm=True)
 
@@ -233,7 +239,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_environment(self):
+    def get_environment(self) -> models.EnvironmentDict:
         commands = ["show system", "show memory"]
         output = {}
         for command in commands:
@@ -263,7 +269,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_facts(self):
+    def get_facts(self) -> models.FactsDict:
         commands = ["show system", "show version", "show interfaces brief"]
         output = {}
         for command in commands:
@@ -285,7 +291,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_interfaces(self):
+    def get_interfaces(self) -> Dict[str, models.InterfaceDict]:
         command = "show interfaces brief"
         output = self._send_command(command, use_textfsm=True)
 
@@ -299,14 +305,14 @@ class FsosDriver(NetworkDriver):
                 "last_flapped": -1.0,
                 "speed": self._format_speed(entry["speed"])
                 if not entry["speed"] == ""
-                else -1,
+                else -1.0,
                 "mtu": -1,
                 "mac_address": "",
             }
 
         return data
 
-    def get_interfaces_counters(self):
+    def get_interfaces_counters(self) -> Dict[str, models.InterfaceCounterDict]:
         command = "show interfaces counters"
         output = self._send_command(command, use_textfsm=True)
 
@@ -330,7 +336,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_interfaces_ip(self):
+    def get_interfaces_ip(self) -> Dict[str, models.InterfacesIPDict]:
         commands = ["show ip interface brief", "show ipv6 interface brief"]
         output = {}
         for command in commands:
@@ -362,7 +368,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_ipv6_neighbors_table(self):
+    def get_ipv6_neighbors_table(self) -> List[models.IPV6NeighborDict]:
         command = "show ipv6 neighbors"
         output = self._send_command(command, use_textfsm=True)
 
@@ -381,7 +387,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_lldp_neighbors(self):
+    def get_lldp_neighbors(self) -> Dict[str, List[models.LLDPNeighborDict]]:
         command = "show lldp neighbor"
         output = self._send_command(command, use_textfsm=True)
 
@@ -399,7 +405,9 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_lldp_neighbors_detail(self, interface=""):
+    def get_lldp_neighbors_detail(
+        self, interface: str = ""
+    ) -> models.LLDPNeighborsDetailDict:
         commands = {}
         if interface == "":
             command = "show lldp neighbor"
@@ -443,7 +451,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_ntp_servers(self):
+    def get_ntp_servers(self) -> Dict[str, models.NTPServerDict]:
         command = "show ntp"
         output = self._send_command(command, use_textfsm=True)
 
@@ -454,7 +462,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_optics(self):
+    def get_optics(self) -> Dict[str, models.OpticsDict]:
         command = "show transceiver"
         output = self._send_command(command, use_textfsm=True)
 
@@ -503,7 +511,9 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_route_to(self, destination="", protocol="", longer=False):
+    def get_route_to(
+        self, destination: str = "", protocol: str = "", longer: bool = False
+    ) -> Dict[str, models.RouteDict]:
         commands = ["show ip route", "show ipv6 route"]
         output = {}
         for command in commands:
@@ -540,7 +550,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_snmp_information(self):
+    def get_snmp_information(self) -> models.SNMPDict:
         commands = ["show snmp-server", "show snmp-server engineID"]
         output = {}
         for command in commands:
@@ -561,7 +571,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_users(self):
+    def get_users(self) -> Dict[str, models.UsersDict]:
         command = "show users"
         output = self._send_command(command, use_textfsm=True)
 
@@ -576,7 +586,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def get_vlans(self):
+    def get_vlans(self) -> Dict[str, models.VlanDict]:
         command = "show vlan all"
         output = self._send_command(command, use_textfsm=True)
 
@@ -593,7 +603,7 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def is_alive(self):
+    def is_alive(self) -> models.AliveDict:
         null = chr(0)
         if self.device is None:
             return {"is_alive": False}
@@ -607,15 +617,15 @@ class FsosDriver(NetworkDriver):
 
     def ping(
         self,
-        destination,
-        source="",
-        ttl=255,
-        timeout=2,
-        size=100,
-        count=5,
-        vrf="",
-        source_interface="",
-    ):
+        destination: str,
+        source: str = "",
+        ttl: int = 255,
+        timeout: int = 2,
+        size: int = 100,
+        count: int = 5,
+        vrf: str = "",
+        source_interface: str = "",
+    ) -> models.PingResultDict:
         command = f"ping {self._get_ip_version(destination)} {destination} size {size} count {count}"
         output = self._send_command(command, use_textfsm=True)[0]
 
@@ -638,7 +648,14 @@ class FsosDriver(NetworkDriver):
 
         return data
 
-    def traceroute(self, destination, source="", ttl=255, timeout=2, vrf=""):
+    def traceroute(
+        self,
+        destination: str,
+        source: str = "",
+        ttl: int = 255,
+        timeout: int = 2,
+        vrf: str = "",
+    ) -> models.TracerouteResultDict:
         command = f"traceroute {self._get_ip_version(destination)} {destination}"
         output = self._send_command(command, use_textfsm=True)[0]
 
