@@ -299,7 +299,7 @@ class FsosDriver(NetworkDriver):
                 "last_flapped": -1.0,
                 "speed": self._format_speed(entry["speed"])
                 if not entry["speed"] == ""
-                else -1,
+                else -1.0,
                 "mtu": -1,
                 "mac_address": "",
             }
