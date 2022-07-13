@@ -54,8 +54,8 @@
     "mac_address": ""
   },
   "Eth 1/7": {
-    "is_up": true,
-    "is_enabled": true,
+    "is_up": false,
+    "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
     "speed": -1.0,
@@ -252,7 +252,7 @@
     "mac_address": ""
   },
   "Group 1": {
-    "is_up": true,
+    "is_up": false,
     "is_enabled": true,
     "description": "",
     "last_flapped": -1.0,
