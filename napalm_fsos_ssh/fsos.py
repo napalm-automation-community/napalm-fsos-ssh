@@ -166,7 +166,7 @@ class FsosDriver(NetworkDriver):
 
         return config
 
-    def cli(self, commands, encoding = "text"):
+    def cli(self, commands, encoding="text"):
         """
         Execute a list of commands and return the output in a dictionary format using the command
         as the key.
