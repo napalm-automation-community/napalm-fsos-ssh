@@ -91,7 +91,7 @@ class FsosDriver(NetworkDriver):
 
     @staticmethod
     def _format_uptime(uptime):
-        uptime_sec = 0
+        uptime_sec = 0.0
 
         uptime_info = uptime.replace("and", "").replace(" ", "").split(",")
 
@@ -99,11 +99,11 @@ class FsosDriver(NetworkDriver):
             unit = re.search(r"[a-zA-Z]+", info).group(0)
             time_value = float(re.search(r"\d+(\.\d+)?", info).group(0))
             if unit == "days":
-                uptime_sec += time_value * 86400
+                uptime_sec += time_value * 86400.0
             elif unit == "hours":
-                uptime_sec += time_value * 3600
+                uptime_sec += time_value * 3600.0
             elif unit == "minutes":
-                uptime_sec += time_value * 60
+                uptime_sec += time_value * 60.0
             elif unit == "seconds":
                 uptime_sec += time_value
 
