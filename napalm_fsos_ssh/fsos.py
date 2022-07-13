@@ -111,7 +111,7 @@ class FsosDriver(NetworkDriver):
 
     @staticmethod
     def _format_speed(speed):
-        if "g" in speed:
+        if "g" in speed.lower():
             speed_match = re.match(r"\d+", speed).group(0)
             v = f"{speed_match}000"
         else:
