@@ -22,8 +22,6 @@ os.environ["NET_TEXTFSM"] = templates
 class FsosDriver(NetworkDriver):
     platform = "fsos"
 
-    """Napalm driver for FSOS"""
-
     def __init__(
         self,
         hostname: str,
@@ -47,13 +45,11 @@ class FsosDriver(NetworkDriver):
         self.netmiko_optional_args.setdefault("port", 22)
 
     def open(self) -> None:
-        """Implement the NAPALM method open (mandatory)"""
         self.device = self._netmiko_open(
             self.device_type, netmiko_optional_args=self.netmiko_optional_args
         )
 
     def close(self) -> None:
-        """Implement the NAPALM method close (mandatory)"""
         self._netmiko_close()
 
     def _send_command(
@@ -67,29 +63,27 @@ class FsosDriver(NetworkDriver):
             if isinstance(command, list):
                 for cmd in command:
                     output = self.device.send_command(cmd, use_textfsm=use_textfsm)
-                    output = self._send_command_postprocess(output)
+                    if not use_textfsm:
+                        output = output.strip()
                     if "% Invalid" not in output:
                         break
             else:
                 output = self.device.send_command(command, use_textfsm=use_textfsm)
-                output = self._send_command_postprocess(output)
+                if not use_textfsm:
+                    output = output.strip()
 
             return output
         except (socket.error, EOFError) as e:
             raise ConnectionClosedException(str(e))
 
     @staticmethod
-    def _send_command_postprocess(output: Union[str, List]) -> Union[str, List[str]]:
-        if not isinstance(output, list):
-            output = output.strip()
-        return output
-
-    @staticmethod
     def _get_ip_version(ip: str) -> str:
+        """Get ip version (ip or ipv6)"""
         return "ip" if type(ip_address(ip)) is IPv4Address else "ipv6"
 
     @staticmethod
     def _format_interface_name(interface: str) -> str:
+        """Format interface name"""
         if re.search(r"\d+", interface):
             interface_type = re.match(r"[A-Za-z]+", interface).group(0)
             interface_unit = (
@@ -101,6 +95,7 @@ class FsosDriver(NetworkDriver):
 
     @staticmethod
     def _format_uptime(uptime: str) -> float:
+        """Format uptime in seconds"""
         uptime_sec = 0.0
 
         uptime_info = uptime.replace("and", "").replace(" ", "").split(",")
@@ -121,6 +116,7 @@ class FsosDriver(NetworkDriver):
 
     @staticmethod
     def _format_speed(speed: str) -> float:
+        """Format speed in mb/s"""
         if "g" in speed.lower():
             speed_match = re.match(r"\d+", speed).group(0)
             v = f"{speed_match}000"
@@ -130,6 +126,7 @@ class FsosDriver(NetworkDriver):
 
     @staticmethod
     def _get_protocol(protocol: str) -> str:
+        """Get routing protocol from the shortname"""
         protocols = {
             "C": "CONNECTED",
             "S": "STATIC",
@@ -151,6 +148,7 @@ class FsosDriver(NetworkDriver):
 
     @staticmethod
     def _get_ipv6_neighbors_state(state: str) -> str:
+        """Get IPv6 Neighbor state from the shortname"""
         states = {
             "I1": "INCOMPLETE",
             "I2": "INVALID",
@@ -166,6 +164,7 @@ class FsosDriver(NetworkDriver):
 
     @staticmethod
     def _sanitize_config(config: str) -> str:
+        """Remove sensitive information from config"""
         match_to_sanitize = [
             r"username\s+\S+\s+password.*\n",
             r"enable\s+password.*\n",
@@ -179,15 +178,6 @@ class FsosDriver(NetworkDriver):
     def cli(
         self, commands: List[str], encoding: str = "text"
     ) -> Dict[str, Union[str, Dict[str, Any]]]:
-        """
-        Execute a list of commands and return the output in a dictionary format using the command
-        as the key.
-        Example input:
-        ["show clock", "show calendar"]
-        Output example:
-        {   "show calendar": u"22:02:01 UTC Thu Feb 18 2016",
-            "show clock": u"*22:01:51.165 UTC Thu Feb 18 2016"}
-        """
         if encoding != "text":
             raise NotImplementedError(f"{encoding} is not a supported encoding")
         cli_output = dict()
