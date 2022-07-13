@@ -4,7 +4,7 @@
     "is_enabled": true,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": 100.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -13,7 +13,7 @@
     "is_enabled": true,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": 100.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -22,7 +22,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -31,7 +31,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -40,7 +40,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -49,7 +49,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -58,7 +58,7 @@
     "is_enabled": true,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -67,7 +67,7 @@
     "is_enabled": true,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": 100.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -76,7 +76,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -112,7 +112,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -121,7 +121,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -130,7 +130,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -139,7 +139,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -148,7 +148,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -157,7 +157,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -175,7 +175,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -184,7 +184,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -193,7 +193,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -202,7 +202,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
@@ -211,7 +211,7 @@
     "is_enabled": false,
     "description": "",
     "last_flapped": -1.0,
-    "speed": 1000.0,
+    "speed": -1.0,
     "mtu": -1,
     "mac_address": ""
   },
