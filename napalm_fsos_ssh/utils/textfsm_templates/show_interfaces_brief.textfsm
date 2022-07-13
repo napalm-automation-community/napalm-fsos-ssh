@@ -4,4 +4,4 @@ Value IS_ENABLED (Up|Down)
 Value SPEED (\S+)
 
 Start
-  ^${INTERFACE}\s+\S+\s+(SFP\+\s+)?${IS_ENABLED}\s+(${IS_UP}\s+)?\S+(\s+${SPEED}\S+)?\s+\S+ -> Record
+  ^${INTERFACE}\s+\S+\s+(SFP\+\s+)?(${IS_ENABLED}\s+)?${IS_UP}\s+\S+(\s+${SPEED}\S+)?\s+\S+ -> Record
