@@ -4,7 +4,7 @@
 import pkg_resources
 
 # Import local modules
-from napalm_fsos_ssh.fsos import FsosDriver
+#from napalm_fsos_ssh.fsos import FsosDriver
 
 try:
     __version__ = pkg_resources.get_distribution('napalm_fsos_ssh').version
