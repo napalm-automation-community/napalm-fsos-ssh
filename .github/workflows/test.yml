@@ -11,17 +11,27 @@ jobs:
           - "3.8"
           - "3.9"
           - "3.10"
+          - "3.11"
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install poetry & dependencies
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'poetry'
+
+      - name: Install poetry dependencies
         run: |
-          curl -sSL https://install.python-poetry.org | POETRY_VERSION=1.2.0b1 python3 -
           export PATH="$PATH:$HOME/.local/bin"
-          poetry install
+          poetry install --with=dev
       - name: Run pre-commit
         run: |
           export PATH="$PATH:$HOME/.local/bin"
@@ -31,4 +41,4 @@ jobs:
         run: |
           export PATH="$PATH:$HOME/.local/bin"
           source `poetry env info --path`/bin/activate
-          pytest
+          poetry run pytest
