@@ -40,13 +40,14 @@ class FsosDriver(NetworkDriver):
         self.password = password
         self.timeout = timeout
         self.vendor = "Fiberstore"
-        self.device_type = "generic"
+        self.device_type = "cisco_ios"
 
         if optional_args is None:
             optional_args = {}
 
         self.netmiko_optional_args = netmiko_args(optional_args)
         self.netmiko_optional_args.setdefault("port", 22)
+        self.force_no_enable = optional_args.get("force_no_enable", False)
 
     def open(self) -> None:
         try:
