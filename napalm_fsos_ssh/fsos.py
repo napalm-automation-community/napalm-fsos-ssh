@@ -10,7 +10,11 @@ from ipaddress import IPv4Address, IPv4Network, ip_address
 from typing import Any, Dict, List, Union
 
 from napalm.base import NetworkDriver, models
-from napalm.base.exceptions import ConnectionClosedException
+from napalm.base.exceptions import (
+    CommandErrorException,
+    ConnectionClosedException,
+    ConnectionException,
+)
 from napalm.base.netmiko_helpers import netmiko_args
 
 templates = os.path.join(
@@ -45,9 +49,12 @@ class FsosDriver(NetworkDriver):
         self.netmiko_optional_args.setdefault("port", 22)
 
     def open(self) -> None:
-        self.device = self._netmiko_open(
-            self.device_type, netmiko_optional_args=self.netmiko_optional_args
-        )
+        try:
+            self.device = self._netmiko_open(
+                self.device_type, netmiko_optional_args=self.netmiko_optional_args
+            )
+        except (ConnectionException, EOFError):
+            raise ConnectionException(f"Cannot connect to {self.hostname}")
 
     def close(self) -> None:
         self._netmiko_close()
@@ -67,8 +74,14 @@ class FsosDriver(NetworkDriver):
                         output = output.strip()
                     if "% Invalid" not in output:
                         break
+                if "% Invalid" in output:
+                    raise CommandErrorException("All commands invalid")
             else:
                 output = self.device.send_command(command, use_textfsm=use_textfsm)
+                if "% Invalid" in output:
+                    raise CommandErrorException(
+                        f"Command invalid. Command output: {output}"
+                    )
                 if not use_textfsm:
                     output = output.strip()
 
@@ -218,6 +231,11 @@ class FsosDriver(NetworkDriver):
                 config = self._sanitize_config(config)
 
             data["startup"] = config
+
+        if retrieve in ["candidate"]:
+            raise NotImplementedError(
+                "Candidate config is not implemented for this platform"
+            )
 
         return data
 
@@ -481,25 +499,25 @@ class FsosDriver(NetworkDriver):
                                             "instant": float(
                                                 entry["input_power_instant"]
                                             ),
-                                            "avg": -1.0,
-                                            "min": -1.0,
-                                            "max": -1.0,
+                                            "avg": -1000.0,
+                                            "min": -1000.0,
+                                            "max": -1000.0,
                                         },
                                         "output_power": {
                                             "instant": float(
                                                 entry["output_power_instant"]
                                             ),
-                                            "avg": -1.0,
-                                            "min": -1.0,
-                                            "max": -1.0,
+                                            "avg": -1000.0,
+                                            "min": -1000.0,
+                                            "max": -1000.0,
                                         },
                                         "laser_bias_current": {
                                             "instant": float(
                                                 entry["laser_bias_current_instant"]
                                             ),
-                                            "avg": -1.0,
-                                            "min": -1.0,
-                                            "max": -1.0,
+                                            "avg": -1000.0,
+                                            "min": -1000.0,
+                                            "max": -1000.0,
                                         },
                                     },
                                 }
