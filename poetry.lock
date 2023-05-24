@@ -582,14 +582,14 @@ files = [
 
 [[package]]
 name = "napalm"
-version = "4.0.0"
+version = "4.1.0"
 description = "Network Automation and Programmability Abstraction Layer with Multivendor support"
 category = "main"
 optional = false
 python-versions = "*"
 files = [
-    {file = "napalm-4.0.0-py2.py3-none-any.whl", hash = "sha256:e4289f6966974b485c1f3de3e8f4a11ac2ed2825e975bbd5afc006331b1e4c36"},
-    {file = "napalm-4.0.0.tar.gz", hash = "sha256:40e1bd297ac4102c14c0d427c51d61c3a12d5d5bec163750733941ad82a464ee"},
+    {file = "napalm-4.1.0-py2.py3-none-any.whl", hash = "sha256:14a5b7759a0247a26fff2c444b1cfc150a08224de8addf4076c384845285bf5b"},
+    {file = "napalm-4.1.0.tar.gz", hash = "sha256:3b3e18efd556861c056ba509eb46f5ffc9e3e6c42db399fa76b6ea9af272c17a"},
 ]
 
 [package.dependencies]
@@ -600,7 +600,7 @@ junos-eznc = ">=2.6.3"
 lxml = ">=4.3.0"
 ncclient = "*"
 netaddr = "*"
-netmiko = ">=4.0.0"
+netmiko = ">=4.1.0"
 netutils = ">=1.0.0"
 paramiko = ">=2.6.0"
 pyeapi = ">=0.8.2"
@@ -608,7 +608,7 @@ pyYAML = "*"
 requests = ">=2.7.0"
 scp = "*"
 setuptools = ">=38.4.0"
-textfsm = "<=1.1.2"
+textfsm = "*"
 ttp = "*"
 ttp-templates = "*"
 typing-extensions = ">=4.3.0"
