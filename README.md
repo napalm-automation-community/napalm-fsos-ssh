@@ -47,6 +47,14 @@ username <your_username> password 0 <your_password>
 username <your_username> privilege 15
 ```
 
+# Contributing
+
+We welcome and encourage contributions to this project! Please read the [Contributing guide](CONTRIBUTING.md). Also make sure to check the [Code of Conduct](CODE_OF_CONDUCT.md) and adhere to its guidelines
+
+# Security
+
+See [SECURITY.md](SECURITY.md) file for details.
+
 # Licence
 
 The code is under CeCILL license.
