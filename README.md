@@ -29,12 +29,13 @@ pre-commit install
 
 ### Run unit test
 ```
-pytest
+poetry run pytest
 ```
 
-### Run pre-commit
+### Run linter & formatter
 ```
-pre-commit run --all-files
+poetry run ruff format . 
+poetry run ruff check .
 ```
 
 # Switch configuration
