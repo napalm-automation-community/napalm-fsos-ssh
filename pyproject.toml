@@ -25,7 +25,7 @@ include = [
 
 [tool.poetry.dependencies]
 python = ">3.8,<3.12"
-napalm = "~4.0.0"
+napalm = ">=4.0,<4.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "~7.4.4"
