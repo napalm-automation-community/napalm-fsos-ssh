@@ -14,10 +14,10 @@ pip install napalm-fsos-ssh
 ```
 
 # Dev
-# Devcontainer
+## Devcontainer
 A devcontainer is available
 
-# Standard
+## Standard
 Install [Poetry](https://python-poetry.org/docs/master/#installing-with-the-official-installer)
 
 Install and setup dependencies
