@@ -437,9 +437,9 @@ class FsosDriver(NetworkDriver):
                     entry["interface"] = entry["interface"].replace(
                         "Group", "port-channel"
                     )
-                commands[
-                    entry["interface"]
-                ] = f"show lldp neighbor {entry['interface']}"
+                commands[entry["interface"]] = (
+                    f"show lldp neighbor {entry['interface']}"
+                )
         else:
             commands[interface] = [f"show lldp neighbor {interface}"]
 
