@@ -208,7 +208,11 @@ class FsosDriver(NetworkDriver):
         return cli_output
 
     def get_config(
-        self, retrieve: str = "all", full: bool = False, sanitized: bool = False
+        self,
+        retrieve: str = "all",
+        full: bool = False,
+        sanitized: bool = False,
+        format="text",
     ) -> models.ConfigDict:
         data = {
             "startup": "",
@@ -426,7 +430,7 @@ class FsosDriver(NetworkDriver):
 
     def get_lldp_neighbors_detail(
         self, interface: str = ""
-    ) -> models.LLDPNeighborsDetailDict:
+    ) -> Dict[str, List[models.LLDPNeighborDetailDict]]:
         commands = {}
         if interface == "":
             command = "show lldp neighbor"
