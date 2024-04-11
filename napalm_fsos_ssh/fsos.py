@@ -208,7 +208,11 @@ class FsosDriver(NetworkDriver):
         return cli_output
 
     def get_config(
-        self, retrieve: str = "all", full: bool = False, sanitized: bool = False, format="text"
+        self,
+        retrieve: str = "all",
+        full: bool = False,
+        sanitized: bool = False,
+        format="text",
     ) -> models.ConfigDict:
         data = {
             "startup": "",
