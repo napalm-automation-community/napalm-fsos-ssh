@@ -1,0 +1,6 @@
+Value Required INTERFACE ([a-zA-Z]+ ?(\d+)?\/? ?\d+)
+Value HOSTNAME (\S+)
+Value PORT (\S+)
+
+Start
+  ^\s+${INTERFACE}\s+\S+\s+${PORT}\s+\d+\s+\S+\s+${HOSTNAME} -> Record

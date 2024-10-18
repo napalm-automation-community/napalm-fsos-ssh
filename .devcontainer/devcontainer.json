@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json
 {
 	"name": "napalm-fsos-ssh",
-	"image": "mcr.microsoft.com/devcontainers/python:3.11",
+	"image": "mcr.microsoft.com/devcontainers/python:3.12",
 	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-        "ghcr.io/devcontainers-contrib/features/poetry:2": {
+        "ghcr.io/va-h/devcontainers-features/uv:1": {
             "version": "latest"
         }
     },

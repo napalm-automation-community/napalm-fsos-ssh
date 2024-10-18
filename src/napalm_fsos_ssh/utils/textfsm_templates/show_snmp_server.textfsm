@@ -1,0 +1,8 @@
+Value Required CONTACT (\S+)
+Value LOCATION (\S+)
+Value List COMMUNITY (.*)
+
+Start
+  ^System Contact\s+:\s+${CONTACT}
+  ^System Location\s+:\s+${LOCATION}
+  ^\s+\d+\.\s+${COMMUNITY}

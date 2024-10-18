@@ -1,0 +1,34 @@
+# First line is the header fields for columns and is mandatory.
+# Regular expressions are supported in all fields except the first.
+# Last field supports variable length command completion.
+# abc[[xyz]] is expanded to abc(x(y(z)?)?)?, regexp inside [[]] is not supported
+#
+# Rules of Ordering:
+#  - OS in alphabetical order
+#  - Template name in length order (longest to shortest)
+#  - When Length is the same, use alphabetical order
+#  - Keep space between OS's
+#
+Template, Hostname, Platform, Command
+
+ping.textfsm, .*, .*, ping.*
+show_arp.textfsm, .*, .*, show arp
+show_interfaces_counters.textfsm, .*, cisco_ios, show interfaces counters
+show_interfaces_brief.textfsm, .*, .*, show interfaces brief
+show_ip_interface_brief.textfsm, .*, .*, show ip interface brief
+show_ip_route.textfsm, .*, .*, show ip route
+show_ipv6_interface_brief.textfsm, .*, .*, show ipv6 interface brief
+show_ipv6_neighbors.textfsm, .*, .*, show ipv6 neighbors
+show_ipv6_route.textfsm, .*, .*, show ipv6 route
+show_lldp_neighbor_interface.textfsm, .*, .*, show lldp neighbor.+
+show_lldp_neighbor.textfsm, .*, .*, show lldp neighbor
+show_memory.textfsm, .*, .*, show memory
+show_ntp.textfsm, .*, .*, show ntp
+show_snmp_server_engine_id.textfsm, .*, .*, show snmp-server engineID
+show_snmp_server.textfsm, .*, .*, show snmp-server
+show_system.textfsm, .*, .*, show system
+show_transceiver.textfsm, .*, .*, show transceiver
+show_users.textfsm, .*, .*, show users
+show_version.textfsm, .*, .*, show version
+show_vlan_all.textfsm, .*, .*, show vlan all
+traceroute.textfsm, .*, .*, traceroute.*

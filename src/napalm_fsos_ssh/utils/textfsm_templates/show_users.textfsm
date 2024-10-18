@@ -1,0 +1,6 @@
+Value Required USERNAME (\S+)
+Value LEVEL (\d+)
+
+Start
+  ^[-\s]+
+  ^${USERNAME}\s+${LEVEL} -> Record

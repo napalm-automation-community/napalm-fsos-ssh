@@ -1,0 +1,27 @@
+Value Required ID (\d+)
+Value NAME (\S+)
+Value List INTERFACES ([a-zA-Z]+ ?(\d+)?\/? ?\d+)
+
+Start
+  ^VLAN ID -> Continue.Record
+  ^VLAN ID\s+:\s+${ID}
+  ^Name\s+:\s+${NAME}
+  ^Members\s+:\s+${INTERFACES} -> Continue
+  ^Members\s+:\s+(\S+ +){1}${INTERFACES} -> Continue
+  ^Members\s+:\s+(\S+ +){2}${INTERFACES} -> Continue
+  ^Members\s+:\s+(\S+ +){3}${INTERFACES} -> Continue
+  ^Members\s+:\s+(\S+ +){4}${INTERFACES} -> Continue
+  ^Members\s+:\s+(\S+ +){5}${INTERFACES} -> Continue
+  ^Members\s+:\s+(\S+ +){6}${INTERFACES} -> Continue
+  ^Members\s+:\s+(\S+ +){7}${INTERFACES} -> Continue
+  ^Members\s+:\s+(\S+ +){8}${INTERFACES} -> Continue
+  ^\s+${INTERFACES} -> Continue
+  ^\s+(\S+ +){1}${INTERFACES} -> Continue
+  ^\s+(\S+ +){2}${INTERFACES} -> Continue
+  ^\s+(\S+ +){3}${INTERFACES} -> Continue
+  ^\s+(\S+ +){4}${INTERFACES} -> Continue
+  ^\s+(\S+ +){5}${INTERFACES} -> Continue
+  ^\s+(\S+ +){6}${INTERFACES} -> Continue
+  ^\s+(\S+ +){7}${INTERFACES} -> Continue
+  ^\s+(\S+ +){8}{INTERFACES} -> Continue
+  ^\n -> Error

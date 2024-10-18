@@ -1,0 +1,8 @@
+Value Required DESTINATION (\d+\.\d+\.\d+\.\d+\/\d+)
+Value PROTOCOL ([A-Za-z]+)
+Value NEXT_HOP (\d+\.\d+\.\d+\.\d+|is\s+directly\s+connected)
+Value OUTGOING_INTERFACE (\S+)
+Value PREFERENCE (\d+)
+
+Start
+  ^${PROTOCOL}(\*)?\s+${DESTINATION}(\s+\[${PREFERENCE}\/\d+\]\s+via)?\s+${NEXT_HOP},\s+${OUTGOING_INTERFACE} -> Record

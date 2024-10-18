@@ -1,0 +1,11 @@
+Value Required REMOTE_SYSTEM_NAME (\S+)
+Value REMOTE_PORT_DESCRIPTION (\S+)
+Value REMOTE_CHASSIS_ID (\S+)
+Value REMOTE_SYSTEM_DESCRIPTION (\S+)
+
+Start
+ ^\s+Index -> Continue.Record
+ ^\s+Chassis ID\s+:\s+${REMOTE_CHASSIS_ID}
+ ^\s+Port Description\s+:\s+${REMOTE_PORT_DESCRIPTION}
+ ^\s+System Name \s+:\s+${REMOTE_SYSTEM_NAME}
+ ^\s+System Description\s+:\s+${REMOTE_SYSTEM_DESCRIPTION}
