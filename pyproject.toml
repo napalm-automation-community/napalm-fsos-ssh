@@ -32,6 +32,7 @@ Issues = "https://github.com/napalm-automation-community/napalm-fsos-ssh/issues"
 [project.optional-dependencies]
 dev = [
     "pytest~=8.3.3",
+    "pytest-cov~=5.0.0",
     "ruff~=0.7.0",
 ]
 
