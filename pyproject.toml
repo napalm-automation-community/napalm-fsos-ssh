@@ -1,37 +1,46 @@
-[tool.poetry]
+[project]
 name = "napalm-fsos-ssh"
-version = "0"
+version = "0.0.0"
 description = "Napalm driver for FSOS through SSH"
-authors = ["Ludovic Ortega <ludovic.ortega@adminafk.fr>"]
-license = "CeCILL"
+authors = [
+    {name = "Ludovic Ortega", email = "ludovic.ortega@adminafk.fr"}
+]
 readme = "README.md"
-homepage = "https://github.com/napalm-automation-community/napalm-fsos-ssh"
-repository = "https://github.com/napalm-automation-community/napalm-fsos-ssh"
 keywords = ["napalm", "fsos", "netmiko"]
 classifiers = [
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Operating System :: OS Independent",
     "License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)",
     "Topic :: Utilities",
 ]
-include = [
-    "LICENSE",
-    "LICENSE.fr",
+
+requires-python = ">=3.9,<4.0.0"
+dependencies = [
+    "napalm>=4.0,<5.1"
 ]
 
-[tool.poetry.dependencies]
-python = ">3.8,<3.13"
-napalm = ">=4.0,<5.1"
+[project.urls]
+Homepage = "https://github.com/napalm-automation-community/napalm-fsos-ssh"
+Repository = "https://github.com/napalm-automation-community/napalm-fsos-ssh"
+Issues = "https://github.com/napalm-automation-community/napalm-fsos-ssh/issues"
 
-[tool.poetry.group.dev.dependencies]
-pytest = ">=7.4.4,<8.4.0"
-ruff = ">=0.5.0,<0.7.0"
+[project.optional-dependencies]
+dev = [
+    "pytest~=8.3.3",
+    "ruff~=0.7.0",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/napalm_fsos_ssh"]

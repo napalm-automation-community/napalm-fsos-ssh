@@ -1,0 +1,9 @@
+Value STATUS (Trace completed)
+Value List IP (\S+)
+Value List RTT1 (\S+)
+Value List RTT2 (\S+)
+Value List RTT3 (\S+)
+
+Start
+  ^\s+\d+\s+${RTT1}(\s+ms)?\s+${RTT2}(\s+ms)?\s+${RTT3}(\s+ms\s+)?(${IP})?
+  ^${STATUS}

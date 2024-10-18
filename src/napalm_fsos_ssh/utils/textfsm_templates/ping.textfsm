@@ -1,0 +1,9 @@
+Value PACKET_SENT (\d+)
+Value PACKET_LOST (\d+)
+Value RTT_MIN (\d+)
+Value RTT_MAX (\d+)
+Value RTT_AVG (\d+)
+
+Start
+  ^\s+${PACKET_SENT}\s+packets transmitted,\s+\d+\s+packets received\s+\S+\s+${PACKET_LOST}
+  ^\s+Minimum\s+=\s+${RTT_MIN}\s+ms,\s+Maximum\s+=\s+${RTT_MAX}\s+ms,\s+Average\s+=\s+${RTT_AVG}

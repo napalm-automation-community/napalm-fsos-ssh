@@ -18,24 +18,19 @@ pip install napalm-fsos-ssh
 A devcontainer is available
 
 ## Standard
-Install [Poetry](https://python-poetry.org/docs/master/#installing-with-the-official-installer)
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
-Install and setup dependencies
-```
-poetry install
-poetry shell
-pre-commit install
-```
+Install and setup dependencies with `uv sync`
 
 ### Run unit test
 ```
-poetry run pytest
+uv run pytest --cov
 ```
 
-### Run linter & formatter
+### Run ruff
 ```
-poetry run ruff format . 
-poetry run ruff check .
+uv run ruff format . 
+uv run ruff check .
 ```
 
 # Switch configuration

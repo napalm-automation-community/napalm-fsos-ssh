@@ -1,0 +1,10 @@
+Value Required INTERFACE ([a-zA-Z]+ ?(\d+)?\/? ?\d+)
+Value Required INPUT_POWER_INSTANT (-?(\d)+.(\d)+)
+Value Required OUTPUT_POWER_INSTANT (-?(\d)+.(\d)+)
+Value Required LASER_BIAS_CURRENT_INSTANT (-?(\d)+.(\d)+)
+
+Start
+  ^Information of\s+${INTERFACE}
+  ^\s+Bias Current\s+:\s+${LASER_BIAS_CURRENT_INSTANT}
+  ^\s+TX Power\s+:\s+${OUTPUT_POWER_INSTANT}
+  ^\s+RX Power\s+:\s+${INPUT_POWER_INSTANT} -> Record

@@ -1,0 +1,6 @@
+Value Required SERIAL_NUMBER (\S+)
+Value OS_VERSION (\S+)
+
+Start
+  ^\s+Serial Number\s+:\s+${SERIAL_NUMBER}
+  ^\s+Operation Code Version\s+:\s+${OS_VERSION}
